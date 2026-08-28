@@ -1,0 +1,64 @@
+{
+    "name": "project-moon/filament-domain-manager",
+    "description": "High-performance multi-tenancy custom domain and DNS manager for Filament with compiled Go native engine and provider connectors.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Project Moon Team",
+            "email": "dev@project-moon.local"
+        }
+    ],
+    "require": {
+        "php": "^8.2|^8.3|^8.4",
+        "illuminate/contracts": "^10.0|^11.0|^12.0",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/database": "^10.0|^11.0|^12.0",
+        "illuminate/console": "^10.0|^11.0|^12.0",
+        "filament/filament": "^3.0",
+        "spatie/laravel-package-tools": "^1.16",
+        "symfony/process": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0",
+        "pestphp/pest": "^2.0|^3.0",
+        "pestphp/pest-plugin-laravel": "^2.0|^3.0",
+        "phpunit/phpunit": "^10.5|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProjectMoon\\FilamentDomainManager\\": "src/",
+            "ProjectMoon\\FilamentDomainManager\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ProjectMoon\\FilamentDomainManager\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ProjectMoon\\FilamentDomainManager\\FilamentDomainManagerServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "playground:install": [
+            "@php -r \"file_exists('playground/.env') || copy('playground/.env.example', 'playground/.env');\"",
+            "cd playground && composer install",
+            "cd playground && php artisan key:generate --force",
+            "cd playground && php artisan domain-manager:install-binary --force"
+        ],
+        "playground:serve": "cd playground && php artisan serve"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

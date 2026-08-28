@@ -1,0 +1,16 @@
+# Exclude development files and testbeds from Composer archive distributions
+/.agent/** export-ignore
+/.agent export-ignore
+/.github/** export-ignore
+/engine/** export-ignore
+/engine export-ignore
+/openspec/** export-ignore
+/openspec export-ignore
+/playground/** export-ignore
+/playground export-ignore
+/tests/** export-ignore
+/tests export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+phpunit.xml export-ignore
+"Product Requirement Document.md" export-ignore

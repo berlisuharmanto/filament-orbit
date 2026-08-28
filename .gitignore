@@ -1,0 +1,24 @@
+# Composer & PHP
+/vendor/
+/node_modules/
+.env
+.phpunit.cache/
+.phpunit.result.cache
+.php-cs-fixer.cache
+
+# Compiled Host Binaries
+/bin/dns-manager*
+!/bin/dist/
+
+# Playground Runtime & Generated Assets
+/playground/vendor/
+/playground/node_modules/
+/playground/.env
+/playground/bin/
+/playground/.phpunit.result.cache
+/playground/database/*.sqlite
+/playground/storage/framework/cache/**
+/playground/storage/framework/sessions/**
+/playground/storage/framework/views/**
+/playground/storage/logs/**
+/playground/bootstrap/cache/*.php
