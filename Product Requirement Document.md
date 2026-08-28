@@ -87,6 +87,24 @@ To recover investment risks associated with developing compiled logic, the reven
 
 * Take-or-Pay Assurance: A revenue framework where customers commit to a minimum volume-based fee. Similar to industrial wastewater treatment contracts, this ensures a guaranteed revenue stream for the developer regardless of fluctuations in the tenant's actual domain usage.
 
+4.3 The 3-Tier Commercial Product Strategy
+
+To maximize community distribution while capturing high enterprise margin and recurring MRR, Version 2.0 adopts a structured 3-tier commercial funnel:
+
+1. **The "Freemium" GitHub Hook (Tier 1 - MIT Open Source)**:
+   * Core Filament `DomainResource` + Native Go Subprocess DNS Engine.
+   * Manual Smart CNAME/A configuration + Multi-Resolver Propagation Checking (`1.1.1.1`, `8.8.8.8`).
+   * *Objective*: Maximize viral adoption, GitHub stars, developer trust, and top-of-funnel acquisition.
+2. **The "Pro" Self-Hosted Commercial License (Tier 2 - $49-$99 One-Time)**:
+   * Unlocks 1-Click Automated Registrar REST drivers (Cloudflare, GoDaddy, AWS Route53).
+   * Unlocks White-Labeled custom tenant instruction modals with custom branding.
+   * Unlocks automated background queue verification jobs (`PollPendingDomainsJob`).
+   * *Objective*: Monetize indie hackers, SaaS founders, and self-hosted dev teams.
+3. **The SaaS Companion Uptime Engine (Tier 3 - $9-$29/month Recurring MRR)**:
+   * External 24/7 edge health monitoring across 10+ global points-of-presence (zero load on tenant host servers).
+   * Multi-channel emergency alarms (WhatsApp, Slack, Discord, SMS) when client DNS records drift or Let's Encrypt SSL certificates approach failure.
+   * *Objective*: Secure recurring monthly revenue from digital agencies and high-traffic multi-tenant SaaS platforms.
+
 This commercial structure is validated by elite professional networks, bridging the gap between high-margin engineering and market implementation.
 
 5. Implementation Strategy & Ecosystem Leverage
