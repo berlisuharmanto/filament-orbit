@@ -2,6 +2,8 @@
 /.agent/** export-ignore
 /.agent export-ignore
 /.github/** export-ignore
+/docs/** export-ignore
+/docs export-ignore
 /engine/** export-ignore
 /engine export-ignore
 /openspec/** export-ignore
